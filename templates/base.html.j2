@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Абонент доступен{% endblock %}</title>
+  
+  <!-- PatternFly Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/patternfly.min.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/patternfly-addons.css') }}" />
+
+  <!-- Bootstrap base + PatternFly extensions + Your styles -->
+  <link rel="stylesheet" href="{{ mystyle }}">
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='scripts/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/patternfly.min.js') }}"></script>
+
+  <!-- Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="pf-c-page">
+		{% block navigation %}{% endblock %}
+		{% block content %}{% endblock %}
+	</div>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
+

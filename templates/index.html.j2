@@ -1,31 +1,8 @@
-      
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Абонент доступен</title>
-  
-  <!-- PatternFly Styles -->
-  <link rel="stylesheet" href="./static/styles/patternfly.min.css" />
-  <link rel="stylesheet" href="./static/styles/patternfly-addons.css" />
+{% extends "base.html.j2" %} 
 
-  <!-- Bootstrap base + PatternFly extensions + Your styles -->
-  <link rel="stylesheet" href="./static/styles/mystyles_index.css">
+{% block title %}Абонент доступен{% endblock %} 
 
-  <!-- JS -->
-  <script src="./static/scripts/jquery.min.js"></script>
-  <script src="./static/scripts/bootstrap.min.js"></script>
-  <script src="./static/scripts/patternfly.min.js"></script>
-
-  <!-- Fonts  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-</head>
-
-<body>
-	<div class="pf-c-page">
+{% block navigation %}
 		<header class="pf-c-page__header">
 			<div class="pf-c-page__header-brand">
 				<div class="pf-c-page__header-brand-toggle">
@@ -60,12 +37,15 @@
 					</div>
 				</div>
 				<div class="pf-c-page__header-brand-link">
-					<a href="index_alternative.html">
+					<a href="/">
 						<h6 style="font-size: xx-large">Абонент доступен</h6>
 					</a>
 				</div>
 			</div>
 		</header>
+{% endblock %}
+
+{% block content %}
 		<main
 		class="pf-c-page__main"
 		tabindex="-1"
@@ -79,11 +59,11 @@
 						<div class="pf-c-content pf-u-text-align-center">
 							<h1></h1>
 							<p></p>
+							<form id="abonent_search">
 							<div class="pf-l-grid">
 								<div class="pf-l-grid__item pf-m-12-col">
 									<div class="pf-l-grid pf-m-gutter">
 										<div class="pf-l-grid__item pf-m-12-col">
-											<form novalidate class="pf-c-form">
 												<div class="pf-c-form__group">
 													<div class="pf-c-form__group-label">
 														<label class="pf-c-form__label" for="form-vertical-name">
@@ -94,16 +74,13 @@
 														<input
 															class="pf-c-form-control"
 															type="text"
-															id="form-vertical-name"
-															name="form-vertical-name"
-															required
+															id="surname"
+															name="surname"
 														/>
 													</div>
 												</div>
-											</form>
 										</div>
 										<div class="pf-l-grid__item pf-m-6-col">
-											<form novalidate class="pf-c-form">
 												<div class="pf-c-form__group">
 													<div class="pf-c-form__group-label">
 														<label class="pf-c-form__label" for="form-vertical-name">
@@ -114,16 +91,13 @@
 														<input
 														class="pf-c-form-control"
 														type="text"
-														id="form-vertical-name"
-														name="form-vertical-name"
-														required
+														id="name"
+														name="name"
 														/>
 													</div>
 												</div>
-											</form>
 										 </div>
 										<div class="pf-l-grid__item pf-m-6-col">
-											<form novalidate class="pf-c-form">
 												<div class="pf-c-form__group">
 													<div class="pf-c-form__group-label">
 														<label class="pf-c-form__label" for="form-vertical-name">
@@ -134,16 +108,13 @@
 														<input
 															class="pf-c-form-control"
 															type="text"
-															id="form-vertical-name"
-															name="form-vertical-name"
-															required
+															id="patronym"
+															name="patronym"
 														/>
 													</div>
 												</div>
-											</form>
 										</div>
 										<div class="pf-l-grid__item pf-m-12-col">
-											<form novalidate class="pf-c-form">
 												<div class="pf-c-form__group">
 													<div class="pf-c-form__group-label">
 														<label class="pf-c-form__label" for="form-vertical-name">
@@ -154,16 +125,13 @@
 														<input
 															class="pf-c-form-control"
 															type="text"
-															id="form-vertical-name"
-															name="form-vertical-name"
-															required
+															id="address"
+															name="address"
 														/>
 													</div>
 												</div>
-											</form>
 										</div>
 										<div class="pf-l-grid__item pf-m-12-col">
-											<form novalidate class="pf-c-form">
 												<div class="pf-c-form__group">
 													<div class="pf-c-form__group-label">
 														<label class="pf-c-form__label" for="form-vertical-name">
@@ -174,20 +142,19 @@
 														<input
 															class="pf-c-form-control"
 															type="text"
-															id="form-vertical-name"
-															name="form-vertical-name"
-															required
+															id="phone"
+															name="phone"
 														/>
 													</div>
 												</div>
-											</form>
 										</div>
 										<div class="pf-l-grid__item pf-m-12-col">
-											<a href="list _alternative.html" class="pf-c-button pf-m-primary pf-m-block" type="button">ИСКАТЬ</a>
+											<input class="pf-c-button pf-m-primary pf-m-block" type="submit" value="ИСКАТЬ"></input>
 										</div>
 									</div>
 								</div>
 							</div>
+						</form>
 						</div>
 					</div>
 				</div>
@@ -202,134 +169,14 @@
 							<p></p>
 							<div class="pf-l-grid">
 								<div class="pf-l-grid__item pf-m-12-col">
-									<table class="pf-c-table pf-m-compact pf-m-grid-lg" role="grid">
+									<table class="pf-c-table pf-m-compact pf-m-grid-lg" role="grid" style="width: 50vw;">
 										<thead>
 											<th role="columnheader" scope="col">Год</th>
 											<th role="columnheader" scope="col">Абонент</th>
 											<th role="columnheader" scope="col">Адрес</th>
 											<th role="columnheader" scope="col">Телефон</th>
 										</thead>
-										<tbody>
-											<tr>
-												<td>1951</td>
-												<td>Либерман К И</td>
-												<td>ул. Декабрист.,</td>
-												<td>Д1-10-49 62/64</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Сахновский К В</td>
-												<td>п. Декабристов, в</td>
-												<td>В2-22-23</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Смирно» м н ул.</td>
-												<td>Декабристов, 57</td>
-												<td>Д1-12-26</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Габер Б Б</td>
-												<td>ул. Декабристов, 6,0</td>
-												<td>Д1-02-08</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Халилулин А</td>
-												<td>п. Декабристов, 4</td>
-												<td>ВЗ-19-19</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Лобанов А И</td>
-												<td>ул. Декабристов, 16</td>
-												<td>АО-99-54</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Пик ЯС</td>
-												<td>ул. Декабрист., 30</td>
-												<td>А1-88-20</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Слоним С С</td>
-												<td>ул. Декабристов, 39</td>
-												<td>Д1-14-96</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Компалов Ф С</td>
-												<td>ул. Декабрист., 8</td>
-												<td>А1-35-49</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Борин Г Г</td>
-												<td>ул. Декабрист., 29-а</td>
-												<td>Д1-19-41</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Березин М Ф</td>
-												<td>ул. Декабристов, 62</td>
-												<td>Д1-51-96.</td>
-											</tr>
-											<tr>
-												<td>1951</td>
-												<td>Рудо И М</td>
-												<td>ул. Декабрист., 2</td>
-												<td>А5-38-50</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Буланов Ш Д</td>
-												<td>ул. Декабрист., 17</td>
-												<td>А5-40-47</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Авидон С А</td>
-												<td>ул. Декабрист., 7</td>
-												<td>А4-97-04</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Беликов С И</td>
-												<td>ул. Декабрист., 57</td>
-												<td>Д1-12-7Г</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Хайкин Н А</td>
-												<td>ул. Декабрист., 46</td>
-												<td>Д1-54-05</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Халилулин А</td>
-												<td>п. Декабрист., 4</td>
-												<td>ВЗ-19-19</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Печинкина С Б</td>
-												<td>п. Декабристов, 7</td>
-												<td>ВЗ-47-97</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Маракуев Д И</td>
-												<td>ул. Декабристов, 22</td>
-												<td>А5-92-14</td>
-											</tr>
-											<tr>
-												<td>1956</td>
-												<td>Маргулис Л М</td>
-												<td>ул. Декабристов, 39</td>
-												<td>Д1-61-86 |</td>
-											</tr>
+										<tbody id="search_results">
 										</tbody>
 									</table>
 								</div>
@@ -339,8 +186,9 @@
 				</div>
 			</section>
 		</main>
-	</div>
+{% endblock %}
 
+{% block scripts %}
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -362,9 +210,61 @@ window.onclick = function(event) {
     }
   }
 }
-</script>
 
-</body>
-</html>
+totalPages = 1;
 
+$(function () { 
+  $('#abonent_search').submit(function () { 
+    var $name = $('input[name="name"]').val();
+    var $surname = $('input[name="surname"]').val();
+    var $patronym = $('input[name="patronym"]').val();
+    var $address = $('input[name="address"]').val();
+    var $phone = $('input[name="phone"]').val();
     
+    var $search_string = "";
+    if ( $phone ) {
+        $search_string = $phone.toString();
+        $search_string = $search_string + "&df=phone";
+    }
+    if ( $address ) {
+        $search_string = $address.toString();
+        $search_string = $search_string + "&df=address";
+    }
+    if ( $name || $surname || $patronym ) {
+        if ( $surname ) {
+            $search_string = $surname.toString();
+        }
+        if ( $name ) {
+            $search_string = $search_string + " " + $name.toString().charAt(0).toUpperCase();
+        }
+        if ( $patronym ) {
+            $search_string = $search_string + " " + $patronym.toString().charAt(0).toUpperCase();
+        }
+        var $search_string = $search_string + "&df=full_name";
+    }
+    
+    if ( $search_string ) {
+        $.get("http://127.0.0.1:5000/abonent?q=" + $search_string, function(data) { 
+          $('#search_results').html("");
+          $(data._items).each(function () { 
+            var tr = '';
+            var href = "/abonent?"
+            tr = tr + '<td>' + this.year.toString() + '</td>';
+            href = href + "year=" + this.year.toString() + "&";
+            tr = tr + '<td>' + this.full_name + '</td>';
+            href = href + "full_name=" + this.full_name + "&";
+            tr = tr + '<td>' + this.address + '</td>';
+            href = href + "address=" + this.address + "&";
+            tr = tr + '<td>' + this.phone.join(", ") + '</td>';
+            href = href + "phone=" + this.phone.join(", ");
+            tr = '<tr onclick="window.location.href=' + "'" + href + "'" + '">' + tr + '</tr>';
+            $('#search_results').append(tr); 
+          }); 
+    });
+    }
+    return false; 
+  }); 
+});
+</script>
+{% endblock %}
+
