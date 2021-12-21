@@ -1,0 +1,370 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Абонент доступен</title>
+  
+  <!-- PatternFly Styles -->
+  <link rel="stylesheet" href="./static/styles/patternfly.min.css" />
+  <link rel="stylesheet" href="./static/styles/patternfly-addons.css" />
+
+  <!-- Bootstrap base + PatternFly extensions + Your styles -->
+  <link rel="stylesheet" href="./static/styles/mystyles_index.css">
+
+  <!-- JS -->
+  <script src="./static/scripts/jquery.min.js"></script>
+  <script src="./static/scripts/bootstrap.min.js"></script>
+  <script src="./static/scripts/patternfly.min.js"></script>
+
+  <!-- Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="pf-c-page">
+		<header class="pf-c-page__header">
+			<div class="pf-c-page__header-brand">
+				<div class="pf-c-page__header-brand-toggle">
+					<div class="pf-c-dropdown pf-m-expanded">
+						<button
+							onclick="myFunction()"
+							class="pf-c-dropdown__toggle pf-m-plain" 
+							id="dropdown-expanded-button" 
+							aria-expanded="true" 
+							type="button"
+						>
+							<i class="fas fa-caret-down" aria-hidden="true"></i>
+							<!-- <span class="pf-c-dropdown__toggle-icon">
+								<i class="fas fa-caret-down" aria-hidden="true"></i>
+							</span> -->
+						</button>
+						<ul id="dropdown_menu" class="pf-c-dropdown__menu" aria-labelledby="dropdown-expanded-button">
+							<li>
+								<a href="#">Список абонентов</a>
+							</li>
+							<li>
+								<a href="#">Справочники</a>
+							</li>
+							<li>
+								<a href="#">Данные</a>
+							</li>
+							<li class="pf-c-divider" role="separator"></li>
+							<li>
+								<a href="#">О проекте</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pf-c-page__header-brand-link">
+					<a href="index_alternative.html">
+						<h6 style="font-size: xx-large">Абонент доступен</h6>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main
+		class="pf-c-page__main"
+		tabindex="-1"
+		id="main-content-page-demo-centered-content"
+		>
+			<section
+				class="pf-c-page__main-section pf-m-limit-width pf-m-align-center pf-m-fill"
+			>
+				<div class="pf-c-page__main-body">
+					<div class="pf-l-bullseye">
+						<div class="pf-c-content pf-u-text-align-center">
+							<h1></h1>
+							<p></p>
+							<div class="pf-l-grid">
+								<div class="pf-l-grid__item pf-m-12-col">
+									<div class="pf-l-grid pf-m-gutter">
+										<div class="pf-l-grid__item pf-m-12-col">
+											<form novalidate class="pf-c-form">
+												<div class="pf-c-form__group">
+													<div class="pf-c-form__group-label">
+														<label class="pf-c-form__label" for="form-vertical-name">
+															<span class="pf-c-form__label-text">Фамилия</span>
+														</label>
+													</div>
+													<div class="pf-c-form__group-control">
+														<input
+															class="pf-c-form-control"
+															type="text"
+															id="form-vertical-name"
+															name="form-vertical-name"
+															required
+														/>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="pf-l-grid__item pf-m-6-col">
+											<form novalidate class="pf-c-form">
+												<div class="pf-c-form__group">
+													<div class="pf-c-form__group-label">
+														<label class="pf-c-form__label" for="form-vertical-name">
+															<span class="pf-c-form__label-text">Имя</span>
+														</label>
+													</div>
+													<div class="pf-c-form__group-control">
+														<input
+														class="pf-c-form-control"
+														type="text"
+														id="form-vertical-name"
+														name="form-vertical-name"
+														required
+														/>
+													</div>
+												</div>
+											</form>
+										 </div>
+										<div class="pf-l-grid__item pf-m-6-col">
+											<form novalidate class="pf-c-form">
+												<div class="pf-c-form__group">
+													<div class="pf-c-form__group-label">
+														<label class="pf-c-form__label" for="form-vertical-name">
+															<span class="pf-c-form__label-text">Отчество</span>
+														</label>
+													</div>
+													<div class="pf-c-form__group-control">
+														<input
+															class="pf-c-form-control"
+															type="text"
+															id="form-vertical-name"
+															name="form-vertical-name"
+															required
+														/>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="pf-l-grid__item pf-m-12-col">
+											<form novalidate class="pf-c-form">
+												<div class="pf-c-form__group">
+													<div class="pf-c-form__group-label">
+														<label class="pf-c-form__label" for="form-vertical-name">
+															<span class="pf-c-form__label-text">Адрес</span>
+														</label>
+													</div>
+													<div class="pf-c-form__group-control">
+														<input
+															class="pf-c-form-control"
+															type="text"
+															id="form-vertical-name"
+															name="form-vertical-name"
+															required
+														/>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="pf-l-grid__item pf-m-12-col">
+											<form novalidate class="pf-c-form">
+												<div class="pf-c-form__group">
+													<div class="pf-c-form__group-label">
+														<label class="pf-c-form__label" for="form-vertical-name">
+															<span class="pf-c-form__label-text">Телефон</span>
+														</label>
+													</div>
+													<div class="pf-c-form__group-control">
+														<input
+															class="pf-c-form-control"
+															type="text"
+															id="form-vertical-name"
+															name="form-vertical-name"
+															required
+														/>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="pf-l-grid__item pf-m-12-col">
+											<a href="list _alternative.html" class="pf-c-button pf-m-primary pf-m-block" type="button">ИСКАТЬ</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section
+				class="pf-c-page__main-section pf-m-limit-width pf-m-align-center pf-m-fill"
+			>
+				<div class="pf-c-page__main-body">
+					<div class="pf-l-bullseye">
+						<div class="pf-c-content pf-u-text-align-center">
+							<h1></h1>
+							<p></p>
+							<div class="pf-l-grid">
+								<div class="pf-l-grid__item pf-m-12-col">
+									<table class="pf-c-table pf-m-compact pf-m-grid-lg" role="grid">
+										<thead>
+											<th role="columnheader" scope="col">Год</th>
+											<th role="columnheader" scope="col">Абонент</th>
+											<th role="columnheader" scope="col">Адрес</th>
+											<th role="columnheader" scope="col">Телефон</th>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1951</td>
+												<td>Либерман К И</td>
+												<td>ул. Декабрист.,</td>
+												<td>Д1-10-49 62/64</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Сахновский К В</td>
+												<td>п. Декабристов, в</td>
+												<td>В2-22-23</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Смирно» м н ул.</td>
+												<td>Декабристов, 57</td>
+												<td>Д1-12-26</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Габер Б Б</td>
+												<td>ул. Декабристов, 6,0</td>
+												<td>Д1-02-08</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Халилулин А</td>
+												<td>п. Декабристов, 4</td>
+												<td>ВЗ-19-19</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Лобанов А И</td>
+												<td>ул. Декабристов, 16</td>
+												<td>АО-99-54</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Пик ЯС</td>
+												<td>ул. Декабрист., 30</td>
+												<td>А1-88-20</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Слоним С С</td>
+												<td>ул. Декабристов, 39</td>
+												<td>Д1-14-96</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Компалов Ф С</td>
+												<td>ул. Декабрист., 8</td>
+												<td>А1-35-49</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Борин Г Г</td>
+												<td>ул. Декабрист., 29-а</td>
+												<td>Д1-19-41</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Березин М Ф</td>
+												<td>ул. Декабристов, 62</td>
+												<td>Д1-51-96.</td>
+											</tr>
+											<tr>
+												<td>1951</td>
+												<td>Рудо И М</td>
+												<td>ул. Декабрист., 2</td>
+												<td>А5-38-50</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Буланов Ш Д</td>
+												<td>ул. Декабрист., 17</td>
+												<td>А5-40-47</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Авидон С А</td>
+												<td>ул. Декабрист., 7</td>
+												<td>А4-97-04</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Беликов С И</td>
+												<td>ул. Декабрист., 57</td>
+												<td>Д1-12-7Г</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Хайкин Н А</td>
+												<td>ул. Декабрист., 46</td>
+												<td>Д1-54-05</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Халилулин А</td>
+												<td>п. Декабрист., 4</td>
+												<td>ВЗ-19-19</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Печинкина С Б</td>
+												<td>п. Декабристов, 7</td>
+												<td>ВЗ-47-97</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Маракуев Д И</td>
+												<td>ул. Декабристов, 22</td>
+												<td>А5-92-14</td>
+											</tr>
+											<tr>
+												<td>1956</td>
+												<td>Маргулис Л М</td>
+												<td>ул. Декабристов, 39</td>
+												<td>Д1-61-86 |</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("dropdown_menu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.pf-c-dropdown__toggle.pf-m-plain')) {
+
+    var dropdowns = document.getElementsByClassName("pf-c-dropdown__menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+    

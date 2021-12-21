@@ -1,0 +1,151 @@
+:root {
+	--pf-global--primary-color--100: var(--pf-global--BackgroundColor--light-200);
+}
+
+.pf-c-form {
+--pf-c-form__label--FontSize: medim;
+}
+
+.pf-c-form-control {
+	--pf-c-form-control--BackgroundColor: #f0f0f000;
+	--pf-c-form-control--hover--BorderBottomColor: var(--pf-global--palette--gold-400);
+	--pf-c-form-control--BorderTopColor: #f0f0f000;
+    --pf-c-form-control--BorderRightColor: #f0f0f000;
+    --pf-c-form-control--BorderBottomColor: var(--pf-global--palette--black-1000);
+    --pf-c-form-control--BorderLeftColor: #f0f0f000;
+	--pf-c-form-control--focus--BorderBottomColor: var(--pf-global--palette--gold-400);
+	--pf-c-form-control--m-expanded--BorderBottomColor: var(--pf-global--palette--gold-400);
+}
+
+.pf-c-page {
+    --pf-c-page--BackgroundColor:  var(--pf-global--BackgroundColor--light-200);
+    --pf-c-page__header--BackgroundColor:  #f0f0f000;
+	--pf-c-page__main-section--BackgroundColor:  var(--pf-global--BackgroundColor--light-200);
+}
+
+
+.pf-c-button.pf-m-primary {
+    color: var(--pf-global--palette--black-1000);
+    background-color: var(--pf-global--palette--gold-400);
+}
+
+.pf-c-button.pf-m-block {
+    display: block;
+    width: auto;
+}
+
+.pf-c-content h1, .pf-c-content h2, .pf-c-content h3, .pf-c-content h4, .pf-c-content h5, .pf-c-content h6 {
+    margin: 0;
+    font-family: "Russo One";
+	--pf-c-content--a--Color: var(--pf-global--palette--gold-400);
+}
+
+
+.pf-c-form__group-label {
+    --pf-c-form__helper-text--MarginTop: 0;
+    padding-bottom: 0.5 rem;
+}
+
+.pf-c-page__main-nav.pf-m-limit-width.pf-m-align-center, .pf-c-page__main-breadcrumb.pf-m-limit-width.pf-m-align-center, .pf-c-page__main-tabs.pf-m-limit-width.pf-m-align-center, .pf-c-page__main-section.pf-m-limit-width.pf-m-align-center, .pf-c-page__main-wizard.pf-m-limit-width.pf-m-align-center {
+    align-items: center;
+}
+
+.pf-c-page__header {
+    color: var(--pf-global--palette--black-1000);
+    z-index: var(--pf-c-page__header--ZIndex);
+    grid-template-columns: none;
+    display: grid;
+    align-items: center;
+    min-width: 0;
+    min-height: var(--pf-c-page__header--MinHeight);
+    background-color:  #f0f0f000;
+}
+
+.pf-c-page__header-brand-link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.pf-l-bullseye {
+    align-items: start;
+}
+
+@font-face {
+    font-family: "Russo One";
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pf-l-grid {
+	border: none;
+	justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.pf-l-grid.pf-m-gutter {
+    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+    border: hidden;
+}
+
+.pf-l-grid__item {
+    padding: .3rem !important;
+    border: 2px hidden;
+}
+
+.pf-c-button.pf-m-plain {
+    --pf-c-button--disabled--Color: var(--pf-global--palette--black-1000);
+    --pf-c-button--disabled--BackgroundColor: var(--pf-c-button--m-plain--disabled--BackgroundColor);
+    color: var(--pf-global--palette--black-1000);
+    background-color: var(--pf-c-button--m-plain--BackgroundColor);
+}
+
+.pf-c-about-modal-box, .pf-c-banner, .pf-c-log-viewer.pf-m-dark, .pf-c-login__footer, .pf-c-login__header, .pf-c-masthead, .pf-c-page__header, .pf-c-page__main-section[class*=pf-m-dark-], .pf-c-page__sidebar-body.pf-m-menu .pf-c-context-selector, .pf-c-wizard__header, .pf-t-dark {
+    --pf-global--Color--100: var(--pf-global--Color--light-100);
+    --pf-global--Color--200: var(--pf-global--Color--light-200);
+    --pf-global--BorderColor--100: var(--pf-global--BorderColor--light-100);
+    --pf-global--primary-color--100: var(--pf-global--palette--black-300);
+    --pf-global--link--Color: var(--pf-global--palette--black-1000);
+    --pf-global--link--Color--hover: var(--pf-global--palette--gold-400);
+    --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
+}
+
+a {
+    font-weight: var(--pf-global--link--FontWeight);
+    color: var(--pf-global--link--Color);
+    text-decoration: none;
+}
+
+.pf-c-dropdown {
+--pf-c-dropdown__menu-item--hover--BackgroundColor: #f0f0f000;
+}
+
+.pf-c-dropdown__menu {
+	display: none;
+	background: #f0ab0000;
+    box-shadow: none;
+}
+
+/* .pf-c-dropdown.pf-m-expanded:focus .pf-c-dropdown__menu {
+	display: block;
+} */
+
+.show {
+	display: list-item;
+    text-align: left;
+}
+
+.pf-c-dropdown__toggle.pf-m-plain.pf-m-active, .pf-c-dropdown__toggle.pf-m-plain:active, .pf-c-dropdown__toggle.pf-m-plain:focus, .pf-c-dropdown__toggle.pf-m-plain:hover, .pf-m-expanded>.pf-c-dropdown__toggle.pf-m-plain {
+    --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--palette--gold-400);
+}
+
+body {
+    font-family: "Russo One";
+    font-size: var(--pf-global--FontSize--md);
+    font-weight: var(--pf-global--FontWeight--normal);
+    line-height: var(--pf-global--LineHeight--md);
+    text-align: left;
+}
