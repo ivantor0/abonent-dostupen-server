@@ -244,7 +244,7 @@ $(function () {
     }
     
     if ( $search_string ) {
-        $.get("http://127.0.0.1:7000/abonent?q=" + $search_string, function(data) { 
+        $.get("./api/abonent?q=" + $search_string, function(data) { 
           $('#search_results').html("");
           $(data._items).each(function () { 
             var tr = '';
